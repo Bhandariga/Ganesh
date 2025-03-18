@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>HTML: Nepali human Register</Title>
+    <link rel="system" type="text/css"href="css/13.form">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Nepali: form</h1>
+        <h4> Register Form</h4>
+        <form action=""method="post" enctype="multipart/form-data"> 
+            <fieldset>
+                <legend>presonal  informtaion</legend>
+                <div class="group">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="name" id="mname" required="required"placeholder="Enter your Name">
+                    <label for ="mname">Middle name</label> 
+                    <input type="text" name="lname" id="lname"required="required"placeholder="Enter your middels Name">
+                    <label for="fname">Last Name</label>
+                    <input type="text" name="name" id="mname" required="required"placeholder="Enter your cast Name">
+    
+                </div>
+                <br>
+                <div class="group">
+                    <label for ="male">Gender</label>
+                    <input type="radio" name="gender" id ="famale">female
+                    <input type="radio" name="gender" id ="male">male
+                    <input type="radio"name="gender" id ="others">others    
+                </div>
+                <br>
+                    <div class="group">
+                        <label for =" terompory address">terompory Address</label>
+                        <input type="text"name="address"id="address"required="required"placeholder="Enter your address">
+                        <br>
+                        <br
+                        <label for =" pramenent address"> pramenant Address</label>
+                        <input type="text"name="address"id="address"required="required"placeholder="Enter your address">
+                    </div>
+                <br>
+                    <div class="group">
+                        <label for ="email">email</label>
+                        <input type="gb2544779@gamil.com" name="email id="email" required="required"placeholder="Enter your email">
+                    </div>
+                    <br>
+                     <div class="group">
+                        <label for ="phone">phone Number </label>
+                        <input type="number"name="phone"required="required"placeholder="Enter self contact  number">
+                        <br>
+                        <br>
+                        <br>
+                        <label for ="phone">phone Number </label>
+                        <input type="number"name="phone"required="required"placeholder="Enter parence contact number">
+
+                    </div> 
+                     <br>
+                     <br>
+                        <div class="group">
+                            <label for="province">province</label>
+                            <select name="province" id="province">
+                                <option value="*" selected="selected">choose province</option>
+                                <option value="ko">Koshi</option>
+                                <option value="ma">Madhesh</option>
+                                <option value="ba">Bagmati</option>
+                                <option value="ga">Gandaki</option>
+                                <option value="lu">Lumbini</option>
+                                <option value="ka">Karnali</option>
+                                <option value="sudpp">Sudurpashchim</option>
+                            </select>
+                     </div>
+                     
+                     <br>                    
+                     <div>
+                        <div class="group">
+                          <label for="district">District</label>
+                          <select name="district" id="district">
+                            <option value="#" selected disabled>Select your district</option>
+                            <option value="sly">Salyan</option>
+                            
+                            <option value="ruk">Rukum</option>
+                            <option value="dg">Dang</option>
+                            <option value="ktm">Kathmandu</option>
+                            <option value="rp">Rolpa</option>
+                            <option value="dlp">Dolpa</option>
+                            <option value="surkhet">Surkhet</option>
+                            <option value="jar">Jajarkot</option>
+                            <option value="hu">Humla</option>
+                            
+                            <option value="ju">Jumla</option>
+                            <option value="kl">Kalikot</option>
+                            <option value="npj">Nepalgunj</option>
+                            <option value="lb">Lumbini</option>
+                            <option value="kp">Kapilvastu</option>
+                            <option value="jk">Janakpur</option>
+                            <option value="bt">Bhaktapur</option>
+                            <option value="lp">Lalitpur</option>
+                            <option value="brd">Bardiya</option>
+                            <option value="kai">Kailali</option>
+                            <option value="mus">Mustang</option>
+                            <option value="pok">Pokhara</option>
+                            <option value="dng">Dhangadhi</option>
+                            <option value="mu">Mugu</option>
+                            <option value="bra">Bara</option>
+                            <option value="rap">Ramechhap</option>
+                            <option value="dhai">Dailekh</option>
+                            <option value="pp">Palpa</option>
+                            <option value="sng">Syangja</option>
+                            <option value="boj">Bhojpur</option>
+                            <option value="up">Udayapur</option>
+                            <option value="su">Sunsari</option>
+                            <option value="sr">Siraha</option>
+                            <option value="rp">Rupandehi</option>
+                          </select>
+                        </div>
+                      </div>
+                      
+
+                     <br>
+                     <br>
+                     <div class="group">
+                        <label for="pro">Your Faculty:</label>
+                        <input type="radio" value="science" name="faculty" id="science">
+                        <label for="science">Science</label>
+                      
+                        <input type="radio" value="commerce" name="faculty" id="commerce">
+                        <label for="commerce">Commerce</label>
+                        <input type="radio" value="education" name="faculty" id="education">
+                        <label for="education">education</label>
+                        <input type="radio" value="" name="faculty" id="civil">
+                        <label for="civil">civil</label>
+                        <input type="radio" value="law" name="faculty" id="law">
+                        <label for="law">law</label>
+                        <input type="radio" value="Programming" name="faculty" id="Programming">
+                        <label for="Programming">Programming</label>
+                      
+                        <input type="radio" value="arts" name="faculty" id="arts">
+                        <label for="arts">Arts</label>
+                      </div>
+                      
+                    <br>
+                    <div class="group">
+                        <label for="bio">Bio</label>
+                        <textarea rows="3" cols="100" name="bio" id="bio"placeholder="write something abuot you"></textarea>
+                    </div>
+                    <br>
+                    <div class="group">
+                     <label for="image">Image</label>
+                     <input type="file"name="image" id="image">
+                    </div> 
+                    <br>
+                    <div>
+                    <div class="group">
+                        <label for="image">Image</label>
+                        <input type="file"name="image" id="image">
+                        </div>
+                        <br>
+                        <div class="group">
+                            <label for="image">Image</label>
+                            <input type="file"name="image" id="image">
+            </fieldset>
+            <fieldset>
+                <legend>User Login informtaion</legend>
+                <div class="group">
+                    <label for ="Username">Username</label>
+                    <input type="text" name="username" id ="username" required="required" placeholder="Enter your username">
+                </div>
+                <>
+                <div class="group">
+                    <label for ="userpassword">password</label>
+                    <input type="password"name="password"id="userpassword"required="required"placeholder="*************">
+                </div>
+                <>
+                <div>
+                    <div class="group">
+                        <label for ="submit box">submit</label>
+                        <input type="submit" name="submit" id="submit"required="required"placeholder="box">
+                    </div>
+                </div>
+            </fieldset>
+            <buttom id="submitbuttom">Sunmit</buttom>
+            input type="Document" id="your id " value="floting,int,char;typr" name="real Name ">
+        </form>
+    </div>
+</body>
+</html>
