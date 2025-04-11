@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #qrcode {
+            margin-top: 20px;
+        }
+        #userName {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>QR Code Generator</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="generateQR()">Generate QR Code</button>
+
+    <h3 id="userName"></h3> <!-- User ko Name Display   -->
+    <div id="qrcode"></div>
+
+    <script>
+        function generateQR() {
+            let name = document.getElementById("nameInput").value;
+            let qrContainer = document.getElementById("qrcode");
+            let userNameDisplay = document.getElementById("userName");
+
+           
+            qrContainer.innerHTML = "";
+            userNameDisplay.innerText = "";
+
+            if (name !== "") {
+                userNameDisplay.innerText = "QR Code for: " + name;
+
+               
+                new QRCode(qrContainer, {
+                    text: name,
+                    width: 200,
+                    height: 200
+                });
+            } else {
+                alert("Ganesh Bhandari");
+            }
+        }
+    </script>
+
+</body>
+</html>
