@@ -1,0 +1,84 @@
+<style>
+  body {
+    font-family: 'Noto Sans Nepali', sans-serif, Arial, sans-serif;
+    background-color: #fff8f0;
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #2c662d;
+    margin-bottom: 30px;
+  }
+
+  .party-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .party-card {
+    background: #fff;
+    border: 2px solid #ff6f3c;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.3);
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.4s ease, background-color 0.4s ease;
+  }
+
+  .party-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 126, 95, 0.5);
+  }
+
+  .party-flag {
+    width: 70px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .leader-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff6f3c;
+    margin-bottom: 15px;
+  }
+
+  .party-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d35400;
+    margin-bottom: 6px;
+  }
+
+  .leader-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c662d;
+  }
+
+  /* choose the code (css chengae this code with only selected by party problem*/
+  .party-card.selected {
+    border-color: #2ecc71;
+    background-color: #d4f9d4;
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.4);
+  }
+
+  .party-card.selected::after {
+    content: '✔';
+    color: #27ae60;
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-weight: bold;
+  }
+</style>

@@ -1,0 +1,136 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to top, #0b001a, #240041, #4a0082); /* Deep purple gradient */
+      background-image: url('image chor neta/background.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .window-bar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .window-bar .btn {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      color: white;
+      background-color: #6c3bc9;
+      text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .window-bar .btn:hover {
+      background-color: #9d4edd;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      width: 350px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .login-box h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 40px 12px 15px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .input-group input::placeholder {
+      color: #eee;
+    }
+
+    .input-group i {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+    }
+
+    .show-password {
+      text-align: left;
+      font-size: 13px;
+      color: white;
+      margin-top: -15px;
+      margin-bottom: 15px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: white;
+    }
+
+    .options a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #6C3BC9;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #eee;
+    }
+
+    .login-box p {
+      color: white;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-box a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: bold;
+      cursor: pointer;
+    }

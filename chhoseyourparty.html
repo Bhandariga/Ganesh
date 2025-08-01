@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Parties with Leaders' Photos</title>
+<link rel="stylesheet" href="chhoseyourparty.css">
+</head>
+<body>
+
+<h1>Major Political Parties of Nepal</h1>
+
+<div class="party-grid" id="partyGrid"></div>
+
+<script>
+  const parties = [
+    {
+      name: 'Rastriya Swatantra Party',
+      value: 'NC',
+      flag: 'image chor neta/rabi flags.jpg',
+      leader: {
+        name: 'Rabi Lamichhane',
+        photo: 'image chor neta/rabi.jpg'
+      }
+    },
+    {
+      name: 'Hamro Nepali Party',
+      value: 'NC',
+      flag: 'image chor neta/balenlauro.jpg',
+      leader: {
+        name: 'Balen Shah',
+        photo: 'image chor neta/balen.webp'
+      }
+    },
+    {
+    name: 'hamro laii hain ramro laii',
+      value: 'NC',
+      flag: 'image chor neta/nepalfgs.jpg',
+      leader: {
+        name: 'GANESH BHANDARI',
+        photo: 'image chor neta/nepal.jpg'
+      }
+    },
+    {
+      name: 'Nepali Congress',
+      value: 'NC',
+      flag: 'image chor neta/sher falg.jpg',
+      leader: {
+        name: 'Sher Bahadur Deuba',
+        photo: 'image chor neta/Sher-Bahadur-Deuba.jpg'
+      }
+    },
+    {
+      name: 'CPN-UML',
+      value: 'CPN-UML',
+      flag: 'image chor neta/kp chor ko flags.jpg',
+      leader: {
+        name: 'KP Sharma Oli',
+        photo: 'image chor neta/kp chor photo.jpg'
+      }
+    },
+    {
+      name: 'CPN (Maoist Centre)',
+      value: 'CPN-MC',
+      flag: 'image chor neta/parchabdako flafs.png',
+      leader: {
+        name: 'Prachanda',
+        photo: 'image chor neta/parchanda chor.jpg'
+      }
+    },
+    {
+      name: 'Janata Samajwadi Party',
+      value: 'JSP',
+      flag: 'image chor neta/janta flags.jpg',
+      leader: {
+        name: 'Mahantha Thakur',
+        photo: 'image chor neta/jantachor.jpg'
+      }
+    },
+    {
+      name: 'Rastriya Prajatantra Party',
+      value: 'RPP',
+      flag: 'image chor neta/halo.jpg',
+      leader: {
+        name: 'Kamal Thapa',
+        photo: 'image chor neta/ratiyaparjantara.webp'
+      }
+    },
+    {
+      name: 'Loktantrik Samajwadi Party',
+      value: 'LSP',
+      flag: 'image chor neta/lok flags.jpg',
+      leader: {
+        name: 'Mahit Thapa',
+        photo: 'image chor neta/dhoti lokiya.jpg'
+      }
+    },
+    {
+      name: 'Rastriya Janamorcha',
+      value: 'RJM',
+      flag: 'image chor neta/janmorcha flags.jpg',
+      leader: {
+        name: 'Kamal Oli',
+        photo: 'image chor neta/janmorchha.jpg'
+      }
+    },
+    {
+      name: 'Rastriya Janatantrik Party',
+      value: 'RJDP',
+      flag: 'image chor neta/rastiy parjantarta flags.jpg',
+      leader: {
+        name: 'Ajit Gurung',
+        photo: 'image chor neta/chorlast.jpg'
+      }
+    }
+  ];
+
+  const partyGrid = document.getElementById('partyGrid');
+  let selectedCard = null;
+
+  parties.forEach(party => {
+    const card = document.createElement('div');
+    card.classList.add('party-card');
+    card.innerHTML = `
+      <img src="${party.flag}" alt="${party.name} Flag" class="party-flag" />
+      <img src="${party.leader.photo}" alt="${party.leader.name}" class="leader-photo" />
+      <div class="party-name">${party.name}</div>
+      <div class="leader-name">${party.leader.name}</div>
+    `;
+
+    card.onclick = () => {
+      if(selectedCard) {
+        selectedCard.classList.remove('selected');
+      }
+      card.classList.add('selected');
+      selectedCard = card;
+
+      console.log('Selected party:', party.value);
+    };
+
+    partyGrid.appendChild(card);
+  });
+</script>
+
+<!-- Done Button -->
+<div style="text-align: center; margin-top: 30px;">
+  <button id="doneBtn">✅ Selection Complete</button>
+</div>
+
+<style>
+  #doneBtn {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  #doneBtn:hover {
+    background-color: #219150;
+  }
+</style>
+
+<script>
+  const doneBtn = document.getElementById('doneBtn');
+  doneBtn.onclick = () => {
+    if (selectedCard) {
+      const selectedPartyName = selectedCard.querySelector('.party-name').innerText.trim();
+      alert(`✅ You have selected the "${selectedPartyName}" party.`);
+       window.location.href = "admin side/result.html";
+    } else {
+      alert("⚠ Please select a party first.");
+    }
+  };
+</script>
+
+</body>
+</html>

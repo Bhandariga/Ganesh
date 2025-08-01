@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="create.css">
+</head>
+<body>
+  <div class="container">
+    <form class="form-box">
+      <label for="name">Name:</label>
+      <div class="input-box">
+        <i class="fa fa-user icon"></i>
+        <input type="text" id="name" placeholder="Enter your Name here" required>
+      </div>
+
+      <label for="email">Email:</label>
+      <div class="input-box">
+        <i class="fa fa-envelope icon"></i>
+        <input type="email" id="email" placeholder="Enter your Email here" required>
+      </div>
+
+      <label for="username">Phone:</label>
+      <div class="input-box">
+        <i class="fa fa-users icon"></i>
+        <input type="text" id="Phone" placeholder="Phone Number" required>
+      </div>
+
+      <label for="password">Password:</label>
+      <div class="input-box">
+        <i class="fa fa-lock icon"></i>
+        <input type="password" id="password" placeholder="Password: Must be 8 char long" required>
+      </div>
+
+      <label for="repassword">Re-enter Password:</label>
+      <div class="input-box">
+        <i class="fa fa-lock icon"></i>
+        <input type="password" id="repassword" placeholder="Confirm Password" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Create Account</button>
+
+      <div class="login-link">
+        <a href="login.html">Already have an account?</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Verification</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at center, #1e3c72, #2a5298, #000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: pulseBG 8s infinite alternate;
+    }
+
+    @keyframes pulseBG {
+      0% { background-position: top; }
+      100% { background-position: bottom; }
+    }
+
+    .otp-container {
+      background-color: #0d1b2a;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      color: #f0f0f0;
+      transform: perspective(800px) rotateX(2deg);
+    }
+
+    .otp-container h2 {
+      font-size: 28px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .otp-container p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .otp-inputs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 30px 0;
+    }
+
+    .otp-inputs input {
+      width: 50px;
+      height: 60px;
+      font-size: 24px;
+      text-align: center;
+      background-color: #112f55;
+      border: 2px solid #00ffff;
+      color: #00ffcc;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #00ffff;
+      transition: all 0.3s ease;
+    }
+
+    .otp-inputs input:focus {
+      transform: scale(1.1);
+      box-shadow: 0 0 16px #00ffff;
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(to right, #00f2fe, #4facfe);
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      color: #000;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00f2fe;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px #4facfe;
+    }
+
+    .resend-text {
+      margin-top: 20px;
+      color: #ff00cc;
+      font-size: 16px;
+      text-decoration: underline;
+      cursor: pointer;
+      text-shadow: 0 0 8px #ff00cc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="otp-container">
+    <h2>OTP Verification</h2>
+    <p>Enter the 6-digit code sent to your device</p>
+
+    <form onsubmit="return submitOTP(event)">
+      <div class="otp-inputs">
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+        <input type="text" maxlength="1" required>
+      </div>
+      <button type="submit">Verify OTP</button>
+    </form>
+
+    <p class="resend-text" onclick="resendOTP()">Didn’t get the code? Resend</p>
+  </div>
+
+  <script>
+    function submitOTP(event) {
+      event.preventDefault();
+      const inputs = document.querySelectorAll('.otp-inputs input');
+      let otp = "";
+      for (let input of inputs) {
+        if (input.value.trim() === "") {
+          alert("Please enter all 6 digits.");
+          return;
+        }
+        otp += input.value;
+      }
+      alert("✅ OTP Entered: " + otp);
+       window.location.href = "newpassword.html";
+    }
+
+    function resendOTP() {
+      alert("🔁 OTP code resent to your device.");
+    }
+  </script>
+
+</body>
+</html>

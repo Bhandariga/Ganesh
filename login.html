@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- Fake top buttons -->
+ <!--<div class="window-bar">
+    <span class="btn" title="Minimize">–</span>
+    <span class="btn" title="Maximize">☐</span>
+    <span class="btn" title="Close">×</span>
+  </div> -->
+
+  <div class="login-box">
+    <h2>Login</h2>
+<!-- username ma kahe problem bhaysii yo line ma hernu aarthat yo line ko code laii recode garnu parhha haii ta -->
+    <div class="input-group">
+      <input type="text" placeholder="Email or Number">
+      <i class="fas fa-user"></i>
+    </div>
+
+    <div class="input-group">
+      <input type="password" placeholder="Password" id="passwordInput">
+      <i class="fas fa-lock"></i>
+    </div>
+
+    <!-- Show password checkbox (password dekhauna laii rw herna laii yo line ma hernu haii ta ganesh password kahe problem bhaysii okey)-->
+    <div class="show-password">
+      <input type="checkbox" onclick="togglePassword()"> Show Password
+    </div>
+<!-- forget password ma kahe problem aaysii yo line ko code ma hernu parchha haii ta-->
+    <div class="options">
+      <label><input type="checkbox"> Remember me</label>
+      <span><a href="forgetpassword.html">Forgot password?</a></span>
+    </div>
+   <button onclick="window.location.href='chhoseyourparty.html';">Login</button>
+
+    <p>Don't have an account? <a href="create.html">Create  account</a></p>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const pwd = document.getElementById("passwordInput");
+      pwd.type = pwd.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>
